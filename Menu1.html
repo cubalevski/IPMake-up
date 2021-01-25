@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	
+<style>
+	.mygalery{
+		  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+	}
+	
+	.slideshow-container{
+		
+	}
+	.navigation{
+		text-decoration: none;
+		display:block;
+		width:70px ;
+		color: #F5B40F;
+	}
+</style>	
+	
+</head>
+
+<body>
+	<img src="header.jpg" width="1000" height="146" alt=""/>
+<table >
+  <tr>
+	 <td valign="top"  >
+      <img src="radika.JPG" width="206" height="146" alt=""/>
+		
+	   <nav class="navigation">
+			 <a href="Home.html">Home</a> 
+				<a href="Menu.html">Menu</a> 
+				<a href="Calculator.html">Calculator</a>
+				<a href="Reservation.php">Reserve</a> 
+	   </nav>	 
+		
+		
+		
+		
+    </td>
+		
+	<td>
+		
+	  <div class="slideshow-container">
+			<h2>Drinks</h2>
+			
+			<div>
+		    <img class="img" onClick="openmodal(); currentSlide(1)" src="2.jpg" width="208" height="192" alt=""/>
+		  </div>
+		  
+		  
+	    <div>
+	      <img class="img" onClick="openmodal(); currentSlide(2)" src="1.jpg" width="208" height="192" alt=""/> 
+		  
+		  </div>
+		  
+	    <div>
+	    <img class="img" onClick="openmodal(); currentSlide(3)" src="3.jpg" width="208" height="192" alt=""/>
+		 </div>
+      </div>	
+		
+	  <div class="mygalery">
+			<span class="close cursor" onclick="closeModal()">&times;</span>
+			
+			<div class="galeryContent">
+				
+			  <div class="slide">
+			    <p class="num">1/3</p>
+		      <img src="2.jpg" width="208" height="192" alt=""/> </div>
+				
+			  <div class="slide">
+			    <p class="num">2/3</p>
+		      <img src="1.jpg" width="208" height="192"alt=""/> </div>
+				
+			  <div class="slide">
+			    <p class="num">3/3</p>
+		      <img src="3.jpg" width="208" height="192" alt=""/> 
+			</div>
+				
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+   				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+          </div>	
+			
+			
+	  </div>	
+		
+		
+	</td>	
+		
+		
+  </tr>
+	
+	
+		
+</table>
+	
+	<script>
+		function openmodal(){
+		
+		}
+		
+		
+	</script>	
+</body>
+</html>

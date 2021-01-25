@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	
+<style>
+.navigation a{
+		font-family: Arial, Helvetica, sans-serif;
+		display:block;
+		width:70px ;
+		color: #F5B40F;
+		text-decoration: none;
+		
+	}
+	
+	.con{
+			margin-left: 30px;
+			
+		}
+</style>	
+	
+</head>
+
+<body>
+<div class="header">
+<img src="header.jpg" width="1000" height="146" alt=""/></div>
+	
+	
+<table height="800">
+	<tr>
+	 <td valign="top">
+      <img src="radika.JPG" width="206" height="146" alt=""/>
+		
+	   <nav class="navigation">
+			 <a href="Home.html">Home</a> 
+				<a href="Menu.html">Menu</a> 
+				<a href="Calculator.html">Calculator</a>
+				<a href="Reservation.php">Reserve</a> 
+		</nav>	 
+		
+		
+		
+		
+	  </td>
+		
+	 <td valign="top" width="500">
+		 
+     <div class="con">
+  						
+		<form style="display:grid">
+		
+		  <div>
+			<label for="age">Age:</label>
+			<input id="age" type="text" placeholder="Age">
+
+		  </div>
+	
+			<div>
+
+			<label >Gender:</label>
+			<input type="radio" name="gender" id="male" >
+				<label >Male</label>
+			<input type="radio" name="gender" id="female">
+				<label >Female</label>
+
+
+			</div>
+
+			<div>
+
+			<label for="height">Height(cm):</label>
+			<input type="number" id="height">
+
+			</div>
+
+			<div>
+
+			<label for="weight">Weight(kg):</label>
+			<input type="number" id="weight">
+
+			</div>
+
+			<div>
+
+			<label for="blood">Blood type:</label>
+			<select id="blood">
+			<option value="A">A</option>
+			<option value="B">B</option>
+			<option value="AB">AB</option>
+			<option value="O">O</option>
+
+
+			</select>	
+
+
+			</div>
+			
+			<div>
+			<button type="button" onclick="calculate()">Calculate</button>
+			</div>
+
+			<div>
+				<p id="calc"></p>
+				<p id="blood_tip"></p>
+			</div>
+	</form>
+
+
+
+						
+		</div>	
+		
+	</td>	
+		
+		
+  </tr>
+	
+	<script>
+		function calculate(){
+			var age = document.getElementById("age").value;
+			var  height=document.getElementById("height").value;
+			var  weight=document.getElementById("weight").value;
+			var  blood=document.getElementById("blood").value;
+			male=document.getElementById("male");
+			female=document.getElementById("female");	
+			
+			if(male.checked){
+				
+				caloriesM=(10*weight)+(6.25*height)-(5*age)+5;
+        		document.getElementById("calc").innerHTML="you need "+caloriesM+" Calories a day to maintain your weight";
+			}else if(female.checked){
+				
+				caloriesW=(10*weight)+(6.25*height)-(5*age)-161;
+           		document.getElementById("calc").innerHTML="you need "+caloriesW+" Calories a day to maintain your weight";
+			}
+			
+			
+			switch (blood) {
+
+				case "A":
+					document.getElementById("blood_tip").innerHTML="For your blood type we recomend fruit and vegetables ";
+					break;
+				case "B":
+					document.getElementById("blood_tip").innerHTML="For your blood type we recomend rough food";
+					break;
+				case "AB":
+					document.getElementById("blood_tip").innerHTML="For your blood type we recomend vegetarian";
+					break;
+				case "O":
+					document.getElementById("blood_tip").innerHTML="For your blood type we recomend meet";
+					break;
+
+    }
+			
+		}
+		
+	</script>	
+		
+</table>	
+</body>
+</html>
